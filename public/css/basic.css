@@ -33,3 +33,10 @@
     margin: 0 15%;
 }
 
+.bgIconColor {
+    background-color: var(--blue);
+    color: white;
+    border-radius: 50%;
+    width: 4rem;
+    text-align: center;
+}

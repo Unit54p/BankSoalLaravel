@@ -41,7 +41,6 @@
                 <span class="kontenFeature">Semua fitur terbuka untuk semua orang</span>
             </div>
         </div>
-
         {{-- 3 --}}
         <div class="cardFeature p-5 ">
             <img src="{{ Storage::url('img/WebAsset/Group 56.png') }}" alt="" class="iconFeature">
@@ -50,7 +49,6 @@
                 <span class="kontenFeature">Semua fitur terbuka untuk semua orang</span>
             </div>
         </div>
-
         {{-- 4 --}}
         <div class="cardFeature p-5 ">
             <img src="{{ Storage::url('img/WebAsset/Group 56.png') }}" alt="" class="iconFeature">
@@ -59,8 +57,48 @@
                 <span class="kontenFeature">Semua fitur terbuka untuk semua orang</span>
             </div>
         </div>
+    </div>
+</div>
+{{-- panduan penggunaan bank soal --}}
+<div class=" contentSection">
+    <div class="judulContent text-center">panduan penggunaan bank soal</div>
+    <div class="flex flex-xol justify-center gap-10">
+        {{-- 1 --}}
+        <div class="cardFeaturePanduan p-5">
+            <div class=" flex justify-center flex-col items-center  mt-2 ">
+                <div class="judulFeature font-semibold text-2xl p-4 bgIconColor">1</div>
+                <div class="kontenFeature text-center mt-2">Masuk ke halaman Bank soal</div>
+            </div>
+        </div>
+        {{-- 2 --}}
+        <div class="cardFeaturePanduan p-5 ">
+            <div class=" flex justify-center flex-col items-center  mt-2 ">
+                <div class="judulFeature font-semibold text-2xl p-4 bgIconColor">2</div>
+                <div class="kontenFeature text-center mt-2">Cari mata kuliah</div>
 
 
+            </div>
+        </div>
+        {{-- 3 --}}
+        <div class="cardFeaturePanduan p-5 ">
+           <div class=" flex justify-center flex-col items-center  mt-2 ">
+               <div class="judulFeature font-semibold text-2xl p-4 bgIconColor">3</div>
+               <div class="kontenFeature text-center mt-2">Pilih mata kuliah
+
+                   yang tersedia</div>
+
+           </div>
+        </div>
+        {{-- 4 --}}
+        <div class="cardFeaturePanduan p-5 ">
+           <div class=" flex justify-center flex-col items-center  mt-2 ">
+               <div class="judulFeature font-semibold text-2xl p-4 bgIconColor">4</div>
+               <div class="kontenFeature text-center mt-2">Pilih mata kuliah
+
+                   yang tersedia</div>
+
+           </div>
+        </div>
     </div>
 </div>
 
