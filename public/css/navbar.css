@@ -1,0 +1,9 @@
+.active {
+    background-color: #0077FF;
+    color: white;
+    font: bold;
+}
+
+nav {
+    margin: 2rem 0;
+}

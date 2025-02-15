@@ -1,0 +1,35 @@
+:root {
+    --black: #000000;
+    --blue: #0077FF;
+}
+
+.btnPrimary {
+    padding: 5px 10px;
+    color: black;
+    background-color: white;
+    border: solid 1px;
+    width: fit-content;
+    padding: 0.7rem 3rem;
+    transition: 0.2s ease;
+}
+
+.btnPrimary:hover {
+    background-color: var(--blue);
+    color: white;
+    border: var(--blue) solid 1px;
+    cursor: pointer;
+}
+
+.bgGradient {
+    background: linear-gradient(to top, #FFFFFF, #F3F7FF);
+}
+
+.judulContent {
+    font-size: 2.5rem;
+    margin: 1.5rem 0;
+}
+
+.contentSection{
+    margin: 0 15%;
+}
+
