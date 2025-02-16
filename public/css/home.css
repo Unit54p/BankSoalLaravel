@@ -28,3 +28,16 @@
 .iconFeature {
     width: 64px;
 }
+
+.imgContribution {
+    border-radius: 14px;
+}
+.textContribution{
+    width: 120px;
+}
+.cardContribution {
+    width: 330px;
+    background: linear-gradient(to top, #FFFFFF, #F3F7FF);
+    border-radius: 14px;
+    box-shadow: gray 0px 4px 5px 0px;
+}

@@ -21,7 +21,8 @@
 
 {{-- content section --}}
 <div class=" contentSection">
-    <div class="judulContent text-center">Fitur</div>
+    <div class="judulContent my-5 text-center">Fitur</div>
+    {{-- card --}}
     <div class="flex flex-xol justify-between">
         {{-- 1 --}}
         <div class="cardFeature p-5 ">
@@ -58,10 +59,29 @@
             </div>
         </div>
     </div>
-</div>
-{{-- panduan penggunaan bank soal --}}
-<div class=" contentSection">
-    <div class="judulContent text-center">panduan penggunaan bank soal</div>
+    {{-- section apa itu bank soal? --}}
+    <div class="flex flex-row mt-14 items-center justify-between mt">
+        {{-- card --}}
+        <div class="bigCard text-xl">
+            <div class="flex flex-col p-6">
+                <div class="mb-3">
+                    Bank soal merupakan fitur yang menghadirkan soal-soal Quiz, UTS, UAS bahkan tugas akhir dari kakak tingkat yang sudah menjalani suatu mata kuliah di teknik informatika.
+                    <br>
+                    kamu dapat mendapatkannya dengan mencari dan mendownload pdf yang tersedia dari mata kuliah yang bersangkutan.
+                </div>
+
+                <button class="btnPrimary">Lihat bank soal</button>
+            </div>
+
+        </div>
+        {{-- teks --}}
+        <div class="text-end text-5xl">
+            apa itu <br>bank soal?
+        </div>
+    </div>
+    {{-- panduan penggunaan bank soal --}}
+    <div class="judulContent my-5 text-center">panduan penggunaan bank soal</div>
+    {{-- card --}}
     <div class="flex flex-xol justify-center gap-10">
         {{-- 1 --}}
         <div class="cardFeaturePanduan p-5">
@@ -81,25 +101,84 @@
         </div>
         {{-- 3 --}}
         <div class="cardFeaturePanduan p-5 ">
-           <div class=" flex justify-center flex-col items-center  mt-2 ">
-               <div class="judulFeature font-semibold text-2xl p-4 bgIconColor">3</div>
-               <div class="kontenFeature text-center mt-2">Pilih mata kuliah
+            <div class=" flex justify-center flex-col items-center  mt-2 ">
+                <div class="judulFeature font-semibold text-2xl p-4 bgIconColor">3</div>
+                <div class="kontenFeature text-center mt-2">Pilih tipe soal dan tanggal yang sesuai</div>
 
-                   yang tersedia</div>
-
-           </div>
+            </div>
         </div>
         {{-- 4 --}}
         <div class="cardFeaturePanduan p-5 ">
-           <div class=" flex justify-center flex-col items-center  mt-2 ">
-               <div class="judulFeature font-semibold text-2xl p-4 bgIconColor">4</div>
-               <div class="kontenFeature text-center mt-2">Pilih mata kuliah
+            <div class=" flex justify-center flex-col items-center  mt-2 ">
+                <div class="judulFeature font-semibold text-2xl p-4 bgIconColor">4</div>
+                <div class="kontenFeature text-center mt-2">Download pdf dan pelajari</div>
 
-                   yang tersedia</div>
-
-           </div>
+            </div>
         </div>
     </div>
-</div>
+    {{-- section contribution --}}
+    <div class="judulContent my-5 text-center">Top contribution</div>
+    <div class="flex justify-between gap-10">
+        <div class="relative flex flex-row items-center gap-5 w-[330px] p-3 rounded-lg shadow-md bg-gradient-to-t from-white to-blue-50 overflow-hidden">
+            <!-- Gambar -->
+            <div>
+                <img src="{{ Storage::url('img/WebAsset/robot front view.webp') }}" alt="Robot" class="w-30 h-30 rounded-lg">
+            </div>
 
+            <!-- Konten -->
+            <div class="flex flex-col w-28">
+                <span class="font-semibold text-gray-900 text-xl">Surya Ario</span>
+                <span class="text-sm text-gray-500">total kontribusi</span>
+                <span class="text-lg font-bold text-black">15</span>
+            </div>
+
+            <!-- Badge -->
+            <div class="absolute bottom-3 right-3 w-10 h-10 flex items-center justify-center rounded-full border-2 border-yellow-500 bg-white text-black font-bold ">
+                1
+            </div>
+        </div>
+
+  <div class="relative flex flex-row items-center gap-5 w-[330px] p-3 rounded-lg shadow-md bg-gradient-to-t from-white to-blue-50 overflow-hidden">
+      <!-- Gambar -->
+      <div>
+          <img src="{{ Storage::url('img/WebAsset/robot front view.webp') }}" alt="Robot" class="w-30 h-30 rounded-lg">
+      </div>
+
+      <!-- Konten -->
+      <div class="flex flex-col w-28">
+          <span class="font-semibold text-gray-900 text-xl">Surya Ario</span>
+          <span class="text-sm text-gray-500">total kontribusi</span>
+          <span class="text-lg font-bold text-black">11</span>
+      </div>
+
+      <!-- Badge -->
+      <div class="absolute bottom-3 right-3 w-10 h-10 flex items-center justify-center rounded-full border-2 border-green-500 bg-white text-black font-bold ">
+          2
+      </div>
+  </div>
+
+  <div class="relative flex flex-row items-center gap-5 w-[330px] p-3 rounded-lg shadow-md bg-gradient-to-t from-white to-blue-50 overflow-hidden">
+      <!-- Gambar -->
+      <div>
+          <img src="{{ Storage::url('img/WebAsset/robot front view.webp') }}" alt="Robot" class="w-30 h-30 rounded-lg">
+      </div>
+
+      <!-- Konten -->
+      <div class="flex flex-col w-28">
+          <span class="font-semibold text-gray-900 text-xl">Surya Ario</span>
+          <span class="text-sm text-gray-500">total kontribusi</span>
+          <span class="text-lg font-bold text-black">10</span>
+      </div>
+
+      <!-- Badge -->
+      <div class="absolute bottom-3 right-3 w-10 h-10 flex items-center justify-center rounded-full border-2 border-blue-500 bg-white text-black font-bold ">
+        3
+      </div>
+  </div>
+
+
+
+    </div>
+
+</div>
 @endsection

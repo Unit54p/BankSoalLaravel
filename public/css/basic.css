@@ -26,10 +26,10 @@
 
 .judulContent {
     font-size: 2.5rem;
-    margin: 1.5rem 0;
+    /* margin: 1.5rem 0; */
 }
 
-.contentSection{
+.contentSection {
     margin: 0 15%;
 }
 
@@ -39,4 +39,12 @@
     border-radius: 50%;
     width: 4rem;
     text-align: center;
+}
+
+.bigCard {
+    width: 534px;
+    /* aspect-ratio: 1/1; */
+    background: linear-gradient(to top, #FFFFFF, #F3F7FF);
+    box-shadow: gray 0px 4px 5px 0px;
+    border-radius: 14px;
 }
