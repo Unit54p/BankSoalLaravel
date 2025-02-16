@@ -4,7 +4,6 @@
 {{-- hero section --}}
 <div class="flex justify-center">
     <div class="hero w-[70%] flex justify-between items-center bgGradient">
-
         <div class="flex flex-col justify-start gap-2">
             <span class="text-4xl">
                 Learn from the past <br>
@@ -13,7 +12,7 @@
             <span>
                 temukan soal-soal relevan yang dapat membantumu belajar
             </span>
-            <button class="btnPrimary" onclick="window.location='{{ route('bankSoal') }}'">Langsung belajar</button>
+            <button class="btnPrimary text-xl" onclick="window.location='{{ route('bankSoal') }}'">Cari soal sekarang</button>
         </div>
         <img src="{{ Storage::url('img\WebAsset\thinking robot.webp') }}" alt="" class="imgHero">
     </div>
@@ -138,45 +137,67 @@
             </div>
         </div>
 
-  <div class="relative flex flex-row items-center gap-5 w-[330px] p-3 rounded-lg shadow-md bg-gradient-to-t from-white to-blue-50 overflow-hidden">
-      <!-- Gambar -->
-      <div>
-          <img src="{{ Storage::url('img/WebAsset/robot front view.webp') }}" alt="Robot" class="w-30 h-30 rounded-lg">
-      </div>
+        <div class="relative flex flex-row items-center gap-5 w-[330px] p-3 rounded-lg shadow-md bg-gradient-to-t from-white to-blue-50 overflow-hidden">
+            <!-- Gambar -->
+            <div>
+                <img src="{{ Storage::url('img/WebAsset/robot front view.webp') }}" alt="Robot" class="w-30 h-30 rounded-lg">
+            </div>
 
-      <!-- Konten -->
-      <div class="flex flex-col w-28">
-          <span class="font-semibold text-gray-900 text-xl">Surya Ario</span>
-          <span class="text-sm text-gray-500">total kontribusi</span>
-          <span class="text-lg font-bold text-black">11</span>
-      </div>
+            <!-- Konten -->
+            <div class="flex flex-col w-28">
+                <span class="font-semibold text-gray-900 text-xl">Surya Ario</span>
+                <span class="text-sm text-gray-500">total kontribusi</span>
+                <span class="text-lg font-bold text-black">11</span>
+            </div>
 
-      <!-- Badge -->
-      <div class="absolute bottom-3 right-3 w-10 h-10 flex items-center justify-center rounded-full border-2 border-green-500 bg-white text-black font-bold ">
-          2
-      </div>
-  </div>
+            <!-- Badge -->
+            <div class="absolute bottom-3 right-3 w-10 h-10 flex items-center justify-center rounded-full border-2 border-green-500 bg-white text-black font-bold ">
+                2
+            </div>
+        </div>
 
-  <div class="relative flex flex-row items-center gap-5 w-[330px] p-3 rounded-lg shadow-md bg-gradient-to-t from-white to-blue-50 overflow-hidden">
-      <!-- Gambar -->
-      <div>
-          <img src="{{ Storage::url('img/WebAsset/robot front view.webp') }}" alt="Robot" class="w-30 h-30 rounded-lg">
-      </div>
+        <div class="relative flex flex-row items-center gap-5 w-[330px] p-3 rounded-lg shadow-md bg-gradient-to-t from-white to-blue-50 overflow-hidden">
+            <!-- Gambar -->
+            <div>
+                <img src="{{ Storage::url('img/WebAsset/robot front view.webp') }}" alt="Robot" class="w-30 h-30 rounded-lg">
+            </div>
 
-      <!-- Konten -->
-      <div class="flex flex-col w-28">
-          <span class="font-semibold text-gray-900 text-xl">Surya Ario</span>
-          <span class="text-sm text-gray-500">total kontribusi</span>
-          <span class="text-lg font-bold text-black">10</span>
-      </div>
+            <!-- Konten -->
+            <div class="flex flex-col w-28">
+                <span class="font-semibold text-gray-900 text-xl">Surya Ario</span>
+                <span class="text-sm text-gray-500">total kontribusi</span>
+                <span class="text-lg font-bold text-black">10</span>
+            </div>
 
-      <!-- Badge -->
-      <div class="absolute bottom-3 right-3 w-10 h-10 flex items-center justify-center rounded-full border-2 border-blue-500 bg-white text-black font-bold ">
-        3
-      </div>
-  </div>
+            <!-- Badge -->
+            <div class="absolute bottom-3 right-3 w-10 h-10 flex items-center justify-center rounded-full border-2 border-blue-500 bg-white text-black font-bold ">
+                3
+            </div>
+        </div>
 
 
+
+    </div>
+    {{-- section bergabung dengan komunitas --}}
+    <div class="flex flex-row mt-14 items-center justify-between mt">
+        {{-- teks --}}
+        <div class="text-start text-5xl">
+            Bergabung dengan <br>
+            komunitas!
+
+        </div>
+        {{-- card --}}
+        <div class="bigCard text-xl">
+            <div class="flex flex-col p-6">
+                <div class="mb-3">
+                    Temukan orang-orang yang memiliki dedikasi seperti kamu dalam komunitas kami. Buat kontribusi pertamamu, jadilah bagian dari sesuatu yang lebih besar, dan mulai perjalanan serumu bersama kami!
+
+                </div>
+
+                <button class="btnPrimary">Bergabung dengan komunitas</button>
+            </div>
+
+        </div>
 
     </div>
 
