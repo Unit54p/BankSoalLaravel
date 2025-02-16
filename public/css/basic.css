@@ -20,10 +20,15 @@
     cursor: pointer;
 }
 
-.bgGradient {
+.bgGradientprimary {
     background: linear-gradient(to top, #FFFFFF, #F3F7FF);
 }
-
+.cardNormal{
+    border-radius: 14px;
+    box-shadow: gray 0px 4px 5px 0px;
+    width: fit-content;
+    height: fit-content;
+}
 .judulContent {
     font-size: 2.5rem;
     /* margin: 1.5rem 0; */

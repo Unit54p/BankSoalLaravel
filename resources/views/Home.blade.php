@@ -3,7 +3,8 @@
 @section('body')
 {{-- hero section --}}
 <div class="flex justify-center">
-    <div class="hero w-[70%] flex justify-between items-center bgGradient">
+    <div class="hero w-[70%] flex justify-between items-center bgGradientprimary">
+
         <div class="flex flex-col justify-start gap-2">
             <span class="text-4xl">
                 Learn from the past <br>
@@ -75,7 +76,7 @@
         </div>
         {{-- teks --}}
         <div class="text-end text-5xl">
-            apa itu <br>bank soal?
+            apa itu bank soal?
         </div>
     </div>
     {{-- panduan penggunaan bank soal --}}
@@ -117,7 +118,7 @@
     </div>
     {{-- section contribution --}}
     <div class="judulContent my-5 text-center">Top contribution</div>
-    <div class="flex justify-between gap-10">
+    <div class="flex justify-evenly ">
         <div class="relative flex flex-row items-center gap-5 w-[330px] p-3 rounded-lg shadow-md bg-gradient-to-t from-white to-blue-50 overflow-hidden">
             <!-- Gambar -->
             <div>

@@ -1,5 +1,6 @@
 <link rel="stylesheet" href="{{ asset('css/footer.css') }}">
-<footer class="mt-10 flex flex-row items-center justify-evenly ">
+<footer class="mt-10 flex flex-row items-center justify-evenly absolute bottom-0">
+
     <div class="text-4xl font-semibold">
         Learn from the past <br>
         be better for future
