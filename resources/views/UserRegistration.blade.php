@@ -2,11 +2,14 @@
 
 @section('body')
 <div class="flex flex-col items-center justify-center min-h-screen">
-    @if(!Auth::check())
     <div class="bg-white shadow-md rounded-lg p-6 w-80">
-        <h2 class="text-xl font-semibold text-center mb-4">Login</h2>
-        <form action="{{ route('userLogin') }}" method="POST">
+        <h2 class="text-xl font-semibold text-center mb-4">Registrasi</h2>
+        <form action="{{ route('userRegistrationProcess') }}" method="POST">
             @csrf
+            <div class="mb-4">
+                <label for="name" class="block text-sm font-medium text-gray-700">Nama</label>
+                <input type="text" id="name" name="name" required class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+            </div>
             <div class="mb-4">
                 <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
                 <input type="email" id="email" name="email" required class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
@@ -15,18 +18,10 @@
                 <label for="password" class="block text-sm font-medium text-gray-700">Password</label>
                 <input type="password" id="password" name="password" required class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
             </div>
-            <button type="submit" class="w-full bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition">
-                Login
+            <button type="submit" class="w-full bg-green-500 text-white px-4 py-2 rounded-lg hover:bg-green-600 transition">
+                Registrasi
             </button>
         </form>
-        <div class="text-center mt-4">
-            <p class="text-sm">Belum punya akun?
-                <a href="{{ route('userRegistrationView') }}" class="text-blue-500 hover:underline">Registrasi</a>
-            </p>
-        </div>
     </div>
-    @else
-    <p class="text-2xl font-bold">Selamat datang, {{ Auth::user()->name }}!</p>
-    @endif
 </div>
 @endsection

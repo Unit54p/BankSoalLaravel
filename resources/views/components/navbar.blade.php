@@ -10,7 +10,7 @@
         <a href="{{ route('about') }}" class="px-5 py-2 text-gray-700  {{ Request::is('about') ? 'active rounded-full' : ''}}">
             About us
         </a>
-        <a href="{{ route('account') }}" class="px-5 py-2 text-gray-700  {{ Request::is('account') ? 'active rounded-full' : ''}}">
+        <a href="{{ route('accountView') }}" class="px-5 py-2 text-gray-700  {{ Request::is('accountView') ? 'active rounded-full' : ''}}">
             Account
         </a>
     </div>
