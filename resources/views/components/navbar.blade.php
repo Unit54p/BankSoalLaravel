@@ -4,7 +4,7 @@
         <a href="{{ route('home') }}" class="px-5 py-2 {{ Request::is('/') ? 'active rounded-full' : ''}}">
             Home
         </a>
-        <a href="{{ route('bankSoal') }}" class="px-5 py-2 text-gray-700  {{ Request::is('bankSoal') ? 'active rounded-full' : ''}}">
+        <a href="{{ route('bankSoal') }}" class="px-5 py-2 text-gray-700  {{ Request::is('bankSoal') ? 'active rounded-full' : ''}} {{ Request::is('cariSoalProcess') ? 'active rounded-full' : ''}}">
             Bank Soal
         </a>
         <a href="{{ route('about') }}" class="px-5 py-2 text-gray-700  {{ Request::is('about') ? 'active rounded-full' : ''}}">

@@ -11,6 +11,9 @@ class UploadSoalController extends Controller
 {
     public function uploadSoalView()
     {
+        if (!Auth::check()) {
+            return redirect()->route('account')->with('error', 'Session Anda telah habis. Silakan login kembali.');
+        }
         return view('UploadSoal');
     }
 
@@ -39,6 +42,6 @@ class UploadSoalController extends Controller
             'penerbit'    => Auth::user()->name, // Mengambil nama user yang login
         ]);
 
-        return redirect()->route('accountView')->with('success', 'Soal berhasil diunggah!');
+        return redirect()->route('uploadSoalView')->with('success', 'Soal berhasil diunggah!');
     }
 }

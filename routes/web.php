@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\BankSoalController;
 use App\Http\Controllers\UploadSoalController;
 use App\Http\Controllers\UserController;
 
@@ -28,14 +29,16 @@ Route::post('/adminLoginAutentication', [AdminController::class, 'adminLoginAute
 Route::get('/accountView', [UserController::class, 'accountView'])->name('accountView');
 
 Route::get('/userRegistrationView', [UserController::class, 'registerView'])->name('userRegistrationView');
+
 Route::post('/userRegistrationProcess', [UserController::class, 'registrationProcess'])->name('userRegistrationProcess');
 
-Route::post('/userLogin', [UserController::class, 'userLogin'])->name('userLogin');
-Route::post('/userLogout', [UserController::class, 'userLogout'])->name('userLogout');
+Route::post('/userLogin', [UserController::class, 'userLoginProcess'])->name('userLogin');
+
+Route::post('/cariSoalProcess', [BankSoalController::class, 'cariSoalProcess'])->name('cariSoalProcess');
 
 Route::middleware('auth')->group(function () {
     Route::get('/uploadSoalView', [UploadSoalController::class, 'uploadSoalView'])->name('uploadSoalView');
-    
+
     Route::post('/uploadSoalProcess', [UploadSoalController::class, 'uploadSoalProcess'])->name('uploadSoalProcess');
 });
 

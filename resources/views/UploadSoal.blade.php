@@ -2,6 +2,18 @@
 
 @section('body')
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+@if(session('error'))
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script>
+    Swal.fire({
+        title: "Session Habis!"
+        , text: "{{ session('error') }}"
+        , icon: "warning"
+        , confirmButtonText: "OK"
+    });
+
+</script>
+@endif
 
 @if(session('success'))
 <script>
@@ -42,8 +54,6 @@
                     @endfor
             </select>
         </div>
-
-
 
         <!-- Pilihan Mata Kuliah -->
         <div class="mb-4">
