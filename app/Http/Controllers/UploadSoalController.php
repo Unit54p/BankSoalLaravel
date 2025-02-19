@@ -21,8 +21,9 @@ class UploadSoalController extends Controller
     {
         // Validasi data
         $validatedData = $request->validate([
-            'namaFile'    => 'required|string|max:255',
+            // 'namaFile'    => 'required|string|max:255',
             'tanggalUjian' => 'required|date',
+            'tipeSoal' => 'string|required',
             'semester'    => 'required|integer|min:1|max:14',
             'mataKuliah'  => 'required|string',
             'fileSoal'    => 'required|mimes:pdf|max:2048', // Maksimum 2MB
@@ -34,12 +35,13 @@ class UploadSoalController extends Controller
 
         // Simpan data ke database
         BankSoal::create([
-            'nama_file'   => $validatedData['namaFile'],
-            'tanggal_ujian' => $validatedData['tanggalUjian'],
-            'semester'    => $validatedData['semester'],
+            // 'nama_file'   => $validatedData['namaFile'],
             'mata_kuliah' => $validatedData['mataKuliah'],
-            'file_path'   => $filePath,
+            'tipe_soal' => $validatedData['tipeSoal'],
+            'semester'    => $validatedData['semester'],
+            'tanggal_ujian' => $validatedData['tanggalUjian'],
             'penerbit'    => Auth::user()->name, // Mengambil nama user yang login
+            'file_path'   => $filePath,
         ]);
 
         return redirect()->route('uploadSoalView')->with('success', 'Soal berhasil diunggah!');

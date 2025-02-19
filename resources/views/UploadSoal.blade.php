@@ -29,14 +29,26 @@
 
 <div class="max-w-lg mx-auto bg-white p-6 rounded-lg shadow-md">
     <h2 class="text-xl font-semibold mb-4">Upload Soal</h2>
-
     <form action="{{ route('uploadSoalProcess') }}" method="POST" enctype="multipart/form-data">
         @csrf
 
         <!-- Nama File -->
         <div class="mb-4">
-            <label class="block text-gray-700">Nama File</label>
-            <input type="text" name="namaFile" class="w-full p-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+            <label class="block text-gray-700">Mata Kuliah</label>
+            <select name="mataKuliah" class="w-full p-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+                <option value="Pemrograman Web">Pemrograman web</option>
+                <option value="Fisika">Fisika</option>
+                <option value="Kimia">Kimia</option>
+            </select>
+        </div>
+
+        <div class="mb-4">
+            <label class="block text-gray-700">Tipe ujian</label>
+            <select name="tipeSoal" class="w-full p-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+                <option value="UAS">UAS</option>
+                <option value="UTS">UTS</option>
+                <option value="QUIZ">QUIZ</option>
+            </select>
         </div>
 
         <!-- Tanggal Ujian -->
@@ -56,14 +68,7 @@
         </div>
 
         <!-- Pilihan Mata Kuliah -->
-        <div class="mb-4">
-            <label class="block text-gray-700">Mata Kuliah</label>
-            <select name="mataKuliah" class="w-full p-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" required>
-                <option value="Matematika">Matematika</option>
-                <option value="Fisika">Fisika</option>
-                <option value="Kimia">Kimia</option>
-            </select>
-        </div>
+
 
         <!-- File PDF -->
         <div class="mb-4">
