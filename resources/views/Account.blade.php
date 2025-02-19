@@ -1,8 +1,8 @@
 @extends('layouts/layBas')
 
 @section('body')
-<div class="flex flex-col items-center justify-center min-h-screen">
-    @if(!Auth::check())
+@if(!Auth::check())
+<div class="flex flex-col items-center justify-center ">
     <div class="bg-white shadow-md rounded-lg p-6 w-80">
         <h2 class="text-xl font-semibold text-center mb-4">Login</h2>
         <form action="{{ route('userLogin') }}" method="POST">
@@ -25,8 +25,19 @@
             </p>
         </div>
     </div>
-    @else
-    <p class="text-2xl font-bold">Selamat datang, {{ Auth::user()->name }}!</p>
-    @endif
 </div>
+
+
+@else
+{{-- kalau sudah login --}}
+<p class="text-2xl text-start">Selamat datang, {{ Auth::user()->name }}!</p>
+<button onclick="window.location.href='{{ route('uploadSoalView') }}'" class="btnPrimary">Upload soal</button>
+
+<form action="{{ route('logout') }}" method="POST">
+    @csrf
+    <button type="submit" class="bg-red-500 text-white px-4 py-2 rounded">Logout</button>
+</form>
+
+@endif
+
 @endsection

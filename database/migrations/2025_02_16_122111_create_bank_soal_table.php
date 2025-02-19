@@ -12,11 +12,13 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('bank_soal', function (Blueprint $table) {
-            $table->id('ID'); // ID sebagai primary key
-            $table->string('nama_matkul'); // Nama mata kuliah
-            $table->date('tanggal_ujian'); // Tanggal ujian
-            $table->integer('semester'); // Semester
-            $table->string('penerbit'); // Penerbit soal
+            $table->id('ID'); // Primary key sesuai preferensi kamu
+            $table->string('nama_file');
+            $table->date('tanggal_ujian');
+            $table->integer('semester');
+            $table->string('mata_kuliah');
+            $table->string('file_path'); // Lokasi file di storage
+            $table->string('penerbit'); // Nama penerbit dari user yang login
             $table->timestamps();
         });
     }

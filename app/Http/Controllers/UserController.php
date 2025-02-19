@@ -55,8 +55,8 @@ class UserController extends Controller
             'password' => 'required',
         ]);
 
-        if (Auth::attemp(['email' => $request->email, 'password' => $request->password])) {
-            return redirect()->route('account')->with('succes', 'Login berhasil');
+        if (Auth::attempt(['email' => $request->email, 'password' => $request->password])) {
+            return redirect()->route('accountView')->with('succes', 'Login berhasil');
         }
         return back()->withErrors(['email' => 'Email atau password salah'])->withInput();
     }

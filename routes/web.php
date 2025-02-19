@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\UploadSoalController;
 use App\Http\Controllers\UserController;
 
 Route::get('/', function () {
@@ -31,6 +32,12 @@ Route::post('/userRegistrationProcess', [UserController::class, 'registrationPro
 
 Route::post('/userLogin', [UserController::class, 'userLogin'])->name('userLogin');
 Route::post('/userLogout', [UserController::class, 'userLogout'])->name('userLogout');
+
+Route::middleware('auth')->group(function () {
+    Route::get('/uploadSoalView', [UploadSoalController::class, 'uploadSoalView'])->name('uploadSoalView');
+    
+    Route::post('/uploadSoalProcess', [UploadSoalController::class, 'uploadSoalProcess'])->name('uploadSoalProcess');
+});
 
 Route::middleware(['admin'])->prefix('admin')->group(function () {
     Route::get('/dashboard', function () {
