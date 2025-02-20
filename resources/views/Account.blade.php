@@ -30,13 +30,14 @@
 
 @else
 {{-- kalau sudah login --}}
-<p class="text-2xl text-start">Selamat datang, {{ Auth::user()->name }}!</p>
-<button onclick="window.location.href='{{ route('uploadSoalView') }}'" class="btnPrimary">Upload soal</button>
-
-<form action="{{ route('logout') }}" method="POST">
-    @csrf
-    <button type="submit" class="bg-red-500 text-white px-4 py-2 rounded">Logout</button>
-</form>
+<div class=" p-10 flex items-center flex-col gap-5">
+    <p class="text-2xl text-start">Selamat datang, {{ Auth::user()->name }}!</p>
+    <button onclick="window.location.href='{{ route('uploadSoalView') }}'" class="btnPrimary">Upload soal</button>
+    <form action="{{ route('logout') }}" method="POST" class="">
+        @csrf
+        <button type="submit" class="btnLogut btnLogutCostumWidth">Logout</button>
+    </form>
+</div>
 
 @endif
 

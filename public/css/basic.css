@@ -20,9 +20,26 @@
     cursor: pointer;
 }
 
-.btnPrimaryCostumWidth {
+.btnPrimaryCostumWidth, .btnLogutCostumWidth{
     width: 100% !important;
     border-radius: 4px !important;
+}
+
+.btnLogut {
+    padding: 5px 10px;
+    color: white;
+    background-color: rgb(255, 72, 72);
+    border: solid 1px rgb(255, 72, 72);
+    width: fit-content;
+    padding: 0.7rem 3rem;
+    transition: 0.2s ease;
+}
+
+.btnLogut:hover {
+    background-color: white;
+    color: rgb(255, 72, 72);
+    border: rgb(255, 72, 72) solid 1px;
+    cursor: pointer;
 }
 
 .bgGradientprimary {
