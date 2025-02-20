@@ -53,8 +53,10 @@
             <span class="text-xl">
                 {{ $dataSoal->tanggal_ujian }}
             </span>
-            <button class="btnPrimary btnPrimaryCostumWidth text-xl">Download pdf</button>
-        </div>
+           <a href="{{ Storage::url($dataSoal->file_path) }}" class="btnPrimary btnPrimaryCostumWidth text-xl">Download pdf</a>
+
+
+ </div>
     </div>
     @endforeach
 </div>

@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\BankSoal;
 use Illuminate\Http\Request;
+use Illuminate\Contracts\Cache\Store;
+use Illuminate\Support\Facades\Storage;
 
 class BankSoalController extends Controller
 {
@@ -24,4 +26,22 @@ class BankSoalController extends Controller
         // Kirim data ke tampilan
         return view('BankSoal', compact('soal'));
     }
+
+    // public function downloadSoalProcess($id)
+    // {
+    //     // $filePath = "BankSoalFile/" . $fileName;
+    //     // dd($id);
+
+    //     $soal = BankSoal::find($id);
+    //     if (!$soal) {
+    //         return redirect()->back()->with('eror', 'soal tidak ditemukan');
+    //     }
+    //     // $filePath = $soal->file_path;
+    //     $filePath =  $soal->file_path; // Tambahkan public/
+    //     if (!Storage::disk('public')->exists($filePath)) {
+    //         return redirect()->back()->with('eror', 'file tidak ditemukan');
+    //     }
+    //     return Storage::download($filePath);
+
+    // }
 }

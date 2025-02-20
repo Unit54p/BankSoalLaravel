@@ -19,7 +19,7 @@ Route::get('/about', function () {
     return view('About');
 })->name('about');
 
-
+// Route::get('/downloadSoal/{id}', [BankSoalController::class, 'downloadSoalProcess'])->name('downloadSoal');
 
 // Group Middleware Admin
 Route::get('/admin', [AdminController::class, 'adminLoginView'])->name('adminLoginView');
