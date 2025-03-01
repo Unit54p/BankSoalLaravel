@@ -6,21 +6,19 @@
 .hero {
     padding: 4rem 7rem;
     border-radius: 14px;
+}
+.costumShadow{
     box-shadow: gray 0px 4px 5px 0px;
 }
-
 .cardFeature {
     background: linear-gradient(to top, #FFFFFF, #F3F7FF);
     border-radius: 14px;
-    box-shadow: gray 0px 4px 5px 0px;
     width: 264px;
     aspect-ratio: 1/1;
 }
 
 .cardFeaturePanduan {
-    background: linear-gradient(to top, #FFFFFF, #F3F7FF);
     border-radius: 14px;
-    box-shadow: gray 0px 4px 5px 0px;
     width: 150px;
     aspect-ratio: 1/1;
 }
@@ -32,12 +30,12 @@
 .imgContribution {
     border-radius: 14px;
 }
-.textContribution{
+
+.textContribution {
     width: 120px;
 }
+
 .cardContribution {
     width: 330px;
-    background: linear-gradient(to top, #FFFFFF, #F3F7FF);
     border-radius: 14px;
-    box-shadow: gray 0px 4px 5px 0px;
 }
