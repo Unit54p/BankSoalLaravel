@@ -3,7 +3,8 @@
 @section('body')
 {{-- hero section --}}
 <div class="flex justify-center">
-    <div class="hero w-[70%] flex justify-between items-center bgGradientprimary">
+    <div class="hero w-[70%] flex justify-between items-center bgGradientprimary costumShadow">
+
 
         <div class="flex flex-col justify-start gap-2">
             <span class="text-4xl">
@@ -23,19 +24,18 @@
 <div class=" contentSection">
     <div class="judulContent my-5 text-center">Fitur</div>
     {{-- card --}}
-    <div class="flex flex-xol justify-between">
+    <div class="flex flex-xol justify-evenly">
         {{-- 1 --}}
-        <div class="cardFeature p-5 ">
+        <div class="cardFeature costumShadow p-5 ">
             <img src="{{ Storage::url('img/WebAsset/Group 56.png') }}" alt="" class="iconFeature">
             <div class=" flex flex-col items-start justify-center  mt-2 ">
                 <span class="judulFeature font-semibold text-2xl">Akses sepenuhnya</span>
                 <span class="kontenFeature">Semua fitur terbuka untuk semua orang</span>
             </div>
         </div>
-
-
         {{-- 2 --}}
-        <div class="cardFeature p-5 ">
+        <div class="cardFeature costumShadow p-5 ">
+
             <img src="{{ Storage::url('img/WebAsset/Group 56.png') }}" alt="" class="iconFeature">
             <div class=" flex flex-col items-start justify-center  mt-2 ">
                 <span class="judulFeature font-semibold text-2xl">Akses sepenuhnya</span>
@@ -43,7 +43,7 @@
             </div>
         </div>
         {{-- 3 --}}
-        <div class="cardFeature p-5 ">
+        <div class="cardFeature costumShadow p-5 ">
             <img src="{{ Storage::url('img/WebAsset/Group 56.png') }}" alt="" class="iconFeature">
             <div class=" flex flex-col items-start justify-center  mt-2 ">
                 <span class="judulFeature font-semibold text-2xl">Akses sepenuhnya</span>
@@ -51,7 +51,7 @@
             </div>
         </div>
         {{-- 4 --}}
-        <div class="cardFeature p-5 ">
+        <div class="cardFeature costumShadow p-5 ">
             <img src="{{ Storage::url('img/WebAsset/Group 56.png') }}" alt="" class="iconFeature">
             <div class=" flex flex-col items-start justify-center  mt-2 ">
                 <span class="judulFeature font-semibold text-2xl">Akses sepenuhnya</span>
@@ -61,6 +61,10 @@
     </div>
     {{-- section apa itu bank soal? --}}
     <div class="flex flex-row mt-14 items-center justify-between mt">
+        {{-- teks --}}
+        <div class="flex justify-center text-6xl w-140">
+            apa itu <br> bank soal?
+        </div>
         {{-- card --}}
         <div class="bigCard text-xl">
             <div class="flex flex-col p-6">
@@ -74,24 +78,21 @@
             </div>
 
         </div>
-        {{-- teks --}}
-        <div class="text-end text-5xl">
-            apa itu bank soal?
-        </div>
+
     </div>
     {{-- panduan penggunaan bank soal --}}
     <div class="judulContent my-5 text-center">panduan penggunaan bank soal</div>
     {{-- card --}}
     <div class="flex flex-xol justify-center gap-10">
         {{-- 1 --}}
-        <div class="cardFeaturePanduan p-5">
+        <div class="cardFeaturePanduan bgGradientprimary  costumShadow p-5">
             <div class=" flex justify-center flex-col items-center  mt-2 ">
                 <div class="judulFeature font-semibold text-2xl p-4 bgIconColor">1</div>
                 <div class="kontenFeature text-center mt-2">Masuk ke halaman Bank soal</div>
             </div>
         </div>
         {{-- 2 --}}
-        <div class="cardFeaturePanduan p-5 ">
+        <div class="cardFeaturePanduan bgGradientprimary  costumShadow p-5 ">
             <div class=" flex justify-center flex-col items-center  mt-2 ">
                 <div class="judulFeature font-semibold text-2xl p-4 bgIconColor">2</div>
                 <div class="kontenFeature text-center mt-2">Cari mata kuliah</div>
@@ -100,7 +101,7 @@
             </div>
         </div>
         {{-- 3 --}}
-        <div class="cardFeaturePanduan p-5 ">
+        <div class="cardFeaturePanduan bgGradientprimary  costumShadow p-5 ">
             <div class=" flex justify-center flex-col items-center  mt-2 ">
                 <div class="judulFeature font-semibold text-2xl p-4 bgIconColor">3</div>
                 <div class="kontenFeature text-center mt-2">Pilih tipe soal dan tanggal yang sesuai</div>
@@ -108,7 +109,7 @@
             </div>
         </div>
         {{-- 4 --}}
-        <div class="cardFeaturePanduan p-5 ">
+        <div class="cardFeaturePanduan bgGradientprimary  costumShadow p-5 ">
             <div class=" flex justify-center flex-col items-center  mt-2 ">
                 <div class="judulFeature font-semibold text-2xl p-4 bgIconColor">4</div>
                 <div class="kontenFeature text-center mt-2">Download pdf dan pelajari</div>
@@ -119,7 +120,7 @@
     {{-- section contribution --}}
     <div class="judulContent my-5 text-center">Top contribution</div>
     <div class="flex justify-evenly ">
-        <div class="relative flex flex-row items-center gap-5 w-[330px] p-3 rounded-lg shadow-md bg-gradient-to-t from-white to-blue-50 overflow-hidden">
+        <div class="relative flex flex-row items-center gap-5 w-[330px] p-3 rounded-lg bgGradientprimary costumShadow">
             <!-- Gambar -->
             <div>
                 <img src="{{ Storage::url('img/WebAsset/robot front view.webp') }}" alt="Robot" class="w-30 h-30 rounded-lg">
@@ -138,7 +139,7 @@
             </div>
         </div>
 
-        <div class="relative flex flex-row items-center gap-5 w-[330px] p-3 rounded-lg shadow-md bg-gradient-to-t from-white to-blue-50 overflow-hidden">
+        <div class="relative flex flex-row items-center gap-5 w-[330px] p-3 rounded-lg bgGradientprimary costumShadow">
             <!-- Gambar -->
             <div>
                 <img src="{{ Storage::url('img/WebAsset/robot front view.webp') }}" alt="Robot" class="w-30 h-30 rounded-lg">
@@ -157,7 +158,7 @@
             </div>
         </div>
 
-        <div class="relative flex flex-row items-center gap-5 w-[330px] p-3 rounded-lg shadow-md bg-gradient-to-t from-white to-blue-50 overflow-hidden">
+        <div class="relative flex flex-row items-center gap-5 w-[330px] p-3 rounded-lg bgGradientprimary costumShadow">
             <!-- Gambar -->
             <div>
                 <img src="{{ Storage::url('img/WebAsset/robot front view.webp') }}" alt="Robot" class="w-30 h-30 rounded-lg">
