@@ -16,7 +16,9 @@ class BankSoalController extends Controller
         ]);
         // dd($request->all());
         // Ambil data berdasarkan mata kuliah yang dicari
-        $soal = BankSoal::where('mata_kuliah', 'LIKE', '%' . $request->input_cariSoal . '%')->get();
+        $soal = BankSoal::where('mata_kuliah', 'LIKE', '%' . $request->input_cariSoal . '%')
+            ->where('status', 'verified')
+            ->get();
 
         // Jika tidak ada data ditemukan, kembalikan dengan pesan
         if ($soal->isEmpty()) {
@@ -26,22 +28,4 @@ class BankSoalController extends Controller
         // Kirim data ke tampilan
         return view('BankSoal', compact('soal'));
     }
-
-    // public function downloadSoalProcess($id)
-    // {
-    //     // $filePath = "BankSoalFile/" . $fileName;
-    //     // dd($id);
-
-    //     $soal = BankSoal::find($id);
-    //     if (!$soal) {
-    //         return redirect()->back()->with('eror', 'soal tidak ditemukan');
-    //     }
-    //     // $filePath = $soal->file_path;
-    //     $filePath =  $soal->file_path; // Tambahkan public/
-    //     if (!Storage::disk('public')->exists($filePath)) {
-    //         return redirect()->back()->with('eror', 'file tidak ditemukan');
-    //     }
-    //     return Storage::download($filePath);
-
-    // }
 }

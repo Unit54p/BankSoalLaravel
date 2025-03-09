@@ -42,6 +42,7 @@ class UploadSoalController extends Controller
             'tanggal_ujian' => $validatedData['tanggalUjian'],
             'penerbit'    => Auth::user()->name, // Mengambil nama user yang login
             'file_path'   => $filePath,
+            'status'   => 'unverified',
         ]);
 
         return redirect()->route('uploadSoalView')->with('success', 'Soal berhasil diunggah!');
