@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\AdminDataControllerController;
 use App\Http\Controllers\BankSoalController;
+use App\Http\Controllers\DataRequestController;
 use App\Http\Controllers\UploadSoalController;
 use App\Http\Controllers\UserController;
 
@@ -22,9 +23,12 @@ Route::get('/about', function () {
 
 // Route::get('/downloadSoal/{id}', [BankSoalController::class, 'downloadSoalProcess'])->name('downloadSoal');
 
-// Group Middleware Admin
-// Route::get('/admin', [AdminController::class, 'adminLoginView'])->name('adminLoginView');
-// Route::post('/adminLoginAutentication', [AdminController::class, 'adminLoginAutentication'])->name('adminLoginAutentication');
+// --- admnin ---
+Route::get('/admin', [AdminController::class, 'adminLoginView'])->name('adminLoginView');
+Route::post('/adminLoginAutentication', [AdminController::class, 'adminLoginAutentication'])->name('adminLoginAutentication');
+// --- admnin ---
+
+
 Route::get('/accountView', [UserController::class, 'accountView'])->name('accountView');
 Route::get('/userRegistrationView', [UserController::class, 'registerView'])->name('userRegistrationView');
 Route::post('/userRegistrationProcess', [UserController::class, 'registrationProcess'])->name('userRegistrationProcess');
@@ -39,6 +43,7 @@ Route::middleware('auth')->group(function () {
     Route::post('/uploadSoalProcess', [UploadSoalController::class, 'uploadSoalProcess'])->name('uploadSoalProcess');
 });
 
+// Group Middleware Admin
 Route::middleware(['admin'])->prefix('admin')->group(function () {
     Route::get('/dashboard', function () {
         return view('admin.adminDashboard');
@@ -48,14 +53,14 @@ Route::middleware(['admin'])->prefix('admin')->group(function () {
     //     return view('admin.adminDataController');
     // })->name('adminDataController');
 
-    Route::get('/adminDataRequest', function () {
-        return view('admin.adminDataRequest');
-    })->name('adminDataRequest');
+    // Route::get('/adminDataRequest', function () {
+    //     return view('admin.adminDataRequest');
+    // })->name('adminDataRequest');
 
     Route::get('/account', function () {
         return view('admin.adminAccount');
     })->name('adminAccount');
-
+    Route::get('/dataRequest', [DataRequestController::class, 'dataRequestView'])->name('dataRequest');
     Route::get('/getDataView', [AdminDataControllerController::class, 'dataView'])->name('getDataView');
 });
 

@@ -14,6 +14,7 @@ class BankSoal extends Model
         'semester',
         'penerbit',
         'file_path',
+        'status',
     ];
     public $timestamps = true; // (Opsional, karena ini default)
 
