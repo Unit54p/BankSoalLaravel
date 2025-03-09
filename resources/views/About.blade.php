@@ -14,7 +14,6 @@
     </div>
     <div>
         <img src="{{ Storage::url('img\WebAsset\Group 66.png') }}" alt="" class="bgGradientprimary !w-[70%] cardNormal">
-
     </div>
 </div>
 
