@@ -4,7 +4,7 @@
         <a href="{{ route('adminDashboard') }}" class="px-5 py-2 {{ Route::currentRouteName() === 'adminDashboard' ? 'active rounded-full' : ''}}">
             Dashboard
         </a>
-        <a href="{{ route('adminDataController') }}" class="px-5 py-2 {{ Route::currentRouteName() === 'adminDataController' ? 'active rounded-full' : ''}}">
+        <a href="{{ route('getDataView') }}" class="px-5 py-2 {{ Route::currentRouteName() === 'getDataView' ? 'active rounded-full' : ''}}">
             Data controller
         </a>
         <a href="{{ route('adminDataRequest') }}" class="px-5 py-2 {{ Route::currentRouteName() === 'adminDataRequest' ? 'active rounded-full' : ''}}">

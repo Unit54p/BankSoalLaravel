@@ -96,8 +96,6 @@
             <div class=" flex justify-center flex-col items-center  mt-2 ">
                 <div class="judulFeature font-semibold text-2xl p-4 bgIconColor">2</div>
                 <div class="kontenFeature text-center mt-2">Cari mata kuliah</div>
-
-
             </div>
         </div>
         {{-- 3 --}}
@@ -105,7 +103,6 @@
             <div class=" flex justify-center flex-col items-center  mt-2 ">
                 <div class="judulFeature font-semibold text-2xl p-4 bgIconColor">3</div>
                 <div class="kontenFeature text-center mt-2">Pilih tipe soal dan tanggal yang sesuai</div>
-
             </div>
         </div>
         {{-- 4 --}}
@@ -113,7 +110,6 @@
             <div class=" flex justify-center flex-col items-center  mt-2 ">
                 <div class="judulFeature font-semibold text-2xl p-4 bgIconColor">4</div>
                 <div class="kontenFeature text-center mt-2">Download pdf dan pelajari</div>
-
             </div>
         </div>
     </div>
