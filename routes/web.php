@@ -60,7 +60,11 @@ Route::middleware(['admin'])->prefix('admin')->group(function () {
     Route::get('/account', function () {
         return view('admin.adminAccount');
     })->name('adminAccount');
-    Route::get('/dataRequest', [DataRequestController::class, 'dataRequestView'])->name('dataRequest');
+
+    Route::get('/dataRequestview', [DataRequestController::class, 'dataRequestView'])->name('dataRequestview');
+
+    Route::patch('/dataRequestAccept/{ID}', [DataRequestController::class, 'dataRequestProcess'])->name('dataRequestAccept');
+
     Route::get('/getDataView', [AdminDataControllerController::class, 'dataView'])->name('getDataView');
 });
 

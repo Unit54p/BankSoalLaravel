@@ -7,7 +7,7 @@
         <a href="{{ route('getDataView') }}" class="hover:bg-blue-500 hover:text-white rounded-full transition duration-200 ease-in-out px-5 py-2 {{ Route::currentRouteName() === 'getDataView' ? 'active ' : ''}}">
             Data controller
         </a>
-        <a href="{{ route('dataRequest') }}" class="hover:bg-blue-500 hover:text-white rounded-full transition duration-200 ease-in-out px-5 py-2 ro {{ Route::currentRouteName() === 'dataRequest' ? 'active ' : ''}}">
+        <a href="{{ route('dataRequestview') }}" class="hover:bg-blue-500 hover:text-white rounded-full transition duration-200 ease-in-out px-5 py-2 ro {{ Route::currentRouteName() === 'dataRequest' ? 'active ' : ''}}">
             Request
         </a>
         <a href="{{ route('adminAccount') }}" class="px-5 py-2 hover:bg-blue-500 hover:text-white rounded-full transition duration-200 ease-in-out {{ Route::currentRouteName() === 'adminAccount' ? 'active ' : ''}}">
