@@ -16,6 +16,6 @@ class BankSoal extends Model
         'file_path',
         'status',
     ];
-    public $timestamps = true; // (Opsional, karena ini default)
+    public $timestamps = false; // (Opsional, karena ini default)
 
 }
