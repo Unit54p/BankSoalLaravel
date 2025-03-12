@@ -12,8 +12,8 @@
 
     <x-navbar>
     </x-navbar>
-    
-    <div class="mx-[15%]">
+
+    <div class="md:mx-[15%] mx-[5%] ">
         @yield('body')
     </div>
 
