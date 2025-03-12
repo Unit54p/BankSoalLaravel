@@ -2,10 +2,7 @@
 @extends('layouts/layBas')
 @section('body')
 {{-- hero section --}}
-<div class="flex justify-center">
-    <div class="hero w-[70%] flex justify-between items-center bgGradientprimary costumShadow">
-
-
+{{-- <div class="hero w-[100%] flex justify-between items-center bgGradientprimary costumShadow">
         <div class="flex flex-col justify-start gap-2">
             <span class="text-4xl">
                 Learn from the past <br>
@@ -15,18 +12,46 @@
                 temukan soal-soal relevan yang dapat membantumu belajar
             </span>
             <button class="btnPrimary text-xl" onclick="window.location='{{ route('bankSoal') }}'">Cari soal sekarang</button>
-        </div>
-        <img src="{{ Storage::url('img\WebAsset\thinking robot.webp') }}" alt="" class="imgHero">
-    </div>
 </div>
+<img src="{{ Storage::url('img\WebAsset\thinking robot.webp') }}" alt="" class="imgHero">
+</div> --}}
+
+
+<div class="hero flex flex-col justify-between items-center bgGradientprimary costumShadow  md:flex-row md:p-8">
+
+    <div class="flex flex-col  gap-2  text-left ">
+
+        <span class="text-3xl md:text-6xl font-weight-500">
+            Learn from the past <br>
+            be better for future
+        </span>
+
+        <span class="text-sm md:text-base">
+            Temukan soal-soal relevan yang dapat membantumu belajar
+        </span>
+
+        <button class="btnPrimary  text-lg px-4 py-3 md:text-xl md:p-4 md:mx-0" onclick="window.location='{{ route('bankSoal') }}'">
+            Cari soal sekarang
+        </button>
+
+    </div>
+
+    <img src="{{ Storage::url('img/WebAsset/thinking robot.webp') }}" alt="Thinking Robot" class="imgHero hidden md:block w-48 md:w-64 lg:w-80 mt-4 md:mt-0">
+</div>
+
+
+
 
 {{-- content section --}}
 <div class=" contentSection">
-    <div class="judulContent my-5 text-center">Fitur</div>
+    <div class=" my-5 text-center text-4xl md:text-6xl">Fitur</div>
+
+
+
     {{-- card --}}
-    <div class="flex flex-xol justify-evenly">
+    <div class="md:grid-cols-4 grid grid-cols-2 gap-y-3">
         {{-- 1 --}}
-        <div class="cardFeature costumShadow p-5 ">
+        <div class="cardFeature costumShadow p-5 mx-auto ">
             <img src="{{ Storage::url('img/WebAsset/Group 56.png') }}" alt="" class="iconFeature">
             <div class=" flex flex-col items-start justify-center  mt-2 ">
                 <span class="judulFeature font-semibold text-2xl">Akses sepenuhnya</span>
@@ -34,8 +59,7 @@
             </div>
         </div>
         {{-- 2 --}}
-        <div class="cardFeature costumShadow p-5 ">
-
+        <div class="cardFeature costumShadow p-5  mx-auto">
             <img src="{{ Storage::url('img/WebAsset/Group 56.png') }}" alt="" class="iconFeature">
             <div class=" flex flex-col items-start justify-center  mt-2 ">
                 <span class="judulFeature font-semibold text-2xl">Akses sepenuhnya</span>
@@ -43,15 +67,15 @@
             </div>
         </div>
         {{-- 3 --}}
-        <div class="cardFeature costumShadow p-5 ">
+        <div class="cardFeature costumShadow p-5 mx-auto">
             <img src="{{ Storage::url('img/WebAsset/Group 56.png') }}" alt="" class="iconFeature">
             <div class=" flex flex-col items-start justify-center  mt-2 ">
                 <span class="judulFeature font-semibold text-2xl">Akses sepenuhnya</span>
-                <span class="kontenFeature">Semua fitur terbuka untuk semua orang</span>
+                <span class="kontenFeature ">Semua fitur terbuka untuk semua orang</span>
             </div>
         </div>
         {{-- 4 --}}
-        <div class="cardFeature costumShadow p-5 ">
+        <div class="cardFeature costumShadow p-5 mx-auto">
             <img src="{{ Storage::url('img/WebAsset/Group 56.png') }}" alt="" class="iconFeature">
             <div class=" flex flex-col items-start justify-center  mt-2 ">
                 <span class="judulFeature font-semibold text-2xl">Akses sepenuhnya</span>
@@ -59,11 +83,14 @@
             </div>
         </div>
     </div>
+
+
+
     {{-- section apa itu bank soal? --}}
-    <div class="flex flex-row mt-14 items-center justify-between mt">
+    <div class="flex md:flex-row my-5 md:mt-14 items-center justify-between flex-col">
         {{-- teks --}}
-        <div class="flex justify-center text-6xl w-140">
-            apa itu <br> bank soal?
+        <div class="flex justify-center text-4xl md:text-6xl w-140 ">
+            Apa itu <br class="md:block hidden"> bank soal?
         </div>
         {{-- card --}}
         <div class="bigCard text-xl">
@@ -73,49 +100,59 @@
                     <br>
                     kamu dapat mendapatkannya dengan mencari dan mendownload pdf yang tersedia dari mata kuliah yang bersangkutan.
                 </div>
-
                 <button class="btnPrimary">Lihat bank soal</button>
             </div>
-
         </div>
-
     </div>
+
+
+
     {{-- panduan penggunaan bank soal --}}
-    <div class="judulContent my-5 text-center">panduan penggunaan bank soal</div>
+    <div class=" my-5 text-4xl md:text-6xl text-center">panduan penggunaan bank soal</div>
     {{-- card --}}
-    <div class="flex flex-xol justify-center gap-10">
+    <div class="md:flex md:justify-evenly  grid grid-cols-2 gap-y-3">
         {{-- 1 --}}
-        <div class="cardFeaturePanduan bgGradientprimary  costumShadow p-5">
+        <div class="cardFeaturePanduan bgGradientprimary  costumShadow p-5 mx-auto">
             <div class=" flex justify-center flex-col items-center  mt-2 ">
                 <div class="judulFeature font-semibold text-2xl p-4 bgIconColor">1</div>
                 <div class="kontenFeature text-center mt-2">Masuk ke halaman Bank soal</div>
             </div>
         </div>
         {{-- 2 --}}
-        <div class="cardFeaturePanduan bgGradientprimary  costumShadow p-5 ">
+        <div class="cardFeaturePanduan bgGradientprimary  costumShadow p-5 mx-auto">
             <div class=" flex justify-center flex-col items-center  mt-2 ">
                 <div class="judulFeature font-semibold text-2xl p-4 bgIconColor">2</div>
                 <div class="kontenFeature text-center mt-2">Cari mata kuliah</div>
             </div>
         </div>
         {{-- 3 --}}
-        <div class="cardFeaturePanduan bgGradientprimary  costumShadow p-5 ">
+        <div class="cardFeaturePanduan bgGradientprimary  costumShadow p-5 mx-auto">
             <div class=" flex justify-center flex-col items-center  mt-2 ">
                 <div class="judulFeature font-semibold text-2xl p-4 bgIconColor">3</div>
                 <div class="kontenFeature text-center mt-2">Pilih tipe soal dan tanggal yang sesuai</div>
             </div>
         </div>
         {{-- 4 --}}
-        <div class="cardFeaturePanduan bgGradientprimary  costumShadow p-5 ">
+        <div class="cardFeaturePanduan bgGradientprimary  costumShadow p-5 mx-auto">
             <div class=" flex justify-center flex-col items-center  mt-2 ">
                 <div class="judulFeature font-semibold text-2xl p-4 bgIconColor">4</div>
                 <div class="kontenFeature text-center mt-2">Download pdf dan pelajari</div>
             </div>
         </div>
     </div>
+
+
+
     {{-- section contribution --}}
+
+    {{-- judul --}}
     <div class="judulContent my-5 text-center">Top contribution</div>
-    <div class="flex justify-evenly ">
+    {{-- judul --}}
+
+    {{-- container content --}}
+    <div class="md:flex md:justify-evenly grid grid-cols-1 gap-y-5 place-items-center">
+
+        {{-- content --}}
         <div class="relative flex flex-row items-center gap-5 w-[330px] p-3 rounded-lg bgGradientprimary costumShadow">
             <!-- Gambar -->
             <div>
@@ -172,10 +209,11 @@
                 3
             </div>
         </div>
-
-
-
+        {{-- content --}}
     </div>
+    {{-- container content --}}
+
+
     {{-- section bergabung dengan komunitas --}}
     <div class="flex flex-row mt-14 items-center justify-between mt">
         {{-- teks --}}

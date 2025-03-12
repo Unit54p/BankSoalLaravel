@@ -20,7 +20,8 @@
     cursor: pointer;
 }
 
-.btnPrimaryCostumWidth, .btnLogutCostumWidth{
+.btnPrimaryCostumWidth,
+.btnLogutCostumWidth {
     width: 100% !important;
     border-radius: 4px !important;
 }
@@ -58,10 +59,6 @@
     /* margin: 1.5rem 0; */
 }
 
-.contentSection {
-    /* margin: 0 15%; */
-}
-
 .bgIconColor {
     background-color: var(--blue);
     color: white;
@@ -76,4 +73,33 @@
     background: linear-gradient(to top, #FFFFFF, #F3F7FF);
     box-shadow: gray 0px 4px 5px 0px;
     border-radius: 14px;
+}
+
+div {
+    /* border: solid 1px red; */
+}
+
+
+@media (max-width: 1024px) {
+    .hero {
+        padding: 3rem 4rem;
+
+    }
+}
+
+/* Mobile (Ukuran Kecil) */
+@media (max-width: 768px) {
+
+    .hero {
+        padding: 2rem 3rem;
+
+    }
+    .bigCard {
+        width: fit-content;
+        /* aspect-ratio: 1/1; */
+        background: linear-gradient(to top, #FFFFFF, #F3F7FF);
+        box-shadow: gray 0px 4px 5px 0px;
+        border-radius: 14px;
+    }
+
 }

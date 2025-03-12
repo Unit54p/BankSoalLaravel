@@ -7,9 +7,11 @@
     padding: 4rem 7rem;
     border-radius: 14px;
 }
-.costumShadow{
+
+.costumShadow {
     box-shadow: gray 0px 4px 5px 0px;
 }
+
 .cardFeature {
     background: linear-gradient(to top, #FFFFFF, #F3F7FF);
     border-radius: 14px;
@@ -20,7 +22,7 @@
 .cardFeaturePanduan {
     border-radius: 14px;
     width: 150px;
-    aspect-ratio: 1/1;
+    aspect-ratio: max-content;
 }
 
 .iconFeature {
@@ -38,4 +40,26 @@
 .cardContribution {
     width: 330px;
     border-radius: 14px;
+}
+
+@media (max-width: 1024px) {
+    .hero {
+        padding: 3rem 4rem;
+
+    }
+}
+
+/* Mobile (Ukuran Kecil) */
+@media (max-width: 768px) {
+    .hero {
+        padding: 2rem 2rem;
+    }
+
+    .cardFeature {
+        background: linear-gradient(to top, #FFFFFF, #F3F7FF);
+        border-radius: 14px;
+        width: 180px;
+        aspect-ratio: 1/1;
+    }
+
 }
